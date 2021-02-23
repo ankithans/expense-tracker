@@ -7,7 +7,9 @@
     "start": "node server",
     "server": "nodemon server",
     "client": "cd client && yarn start",
-    "dev": "concurrently \"yarn server\" \"yarn client\""
+    "clientinstall": "yarn --prefix client",
+    "dev": "concurrently \"yarn server\" \"yarn client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn --prefix client && yarn build --prefix client"
   },
   "author": "Ankit Hans",
   "license": "MIT",
